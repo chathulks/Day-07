@@ -9,10 +9,18 @@
     <title>Day | 07</title>
 </head>
 
-<body>
+<body class="d-flex justify-content-center p-5">
 
     <!-- Body Section Start -->
-     <h1 class="fs-6">Java Script</h1>
+    <div class="rounded-5 card d-flex justify-content-center align-items-center" style="width: 400px;">
+        <div class="row">
+            <div class="col p-5">
+                <h1 class="mb-4 fw-semibold">Number Guessing!</h1>
+                <input type="number" class="form-control mb-4" id="guessNumber" placeholder="Enter 0 to 10 number.!">
+                <input type="button" value="Guess!" class="btn btn-warning" onclick="guessingNumber()">
+            </div>
+        </div>
+    </div>
     <!-- Body Section End -->
 
     <script src="js/app.js"></script>
