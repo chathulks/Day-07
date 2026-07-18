@@ -8,20 +8,40 @@ function guessingNumber() {
     if (userNumber == "") {
         Swal.fire({
             position: "center",
+            icon: "warning",
+            title: "Please enter your number.!",
+            showConfirmButton: true,
+        });
+    } else if (num > userNumber) {
+        Swal.fire({
+            position: "center",
+            icon: "warning",
+            title: "Your enter number Greater than Random number!",
+            showConfirmButton: true,
+        });
+    } else if (num < userNumber) {
+        Swal.fire({
+            position: "center",
+            icon: "warning",
+            title: "Your enter number Less than Random number!",
+            showConfirmButton: true,
+        });
+    } else if (num == userNumber) {
+        Swal.fire({
+            position: "center",
             icon: "success",
-            title: "Your work has been saved",
+            title: "Your Guessing Success.!",
             showConfirmButton: false,
             timer: 1500
         });
-        alert("Please enter your number.!");
-    } else if (num > userNumber) {
-        alert("Your enter number Greater than Random number!");
-    } else if (num < userNumber) {
-        alert("Your enter number Less than Random number!");
-    } else if (num == userNumber) {
-        alert("Your Guessing Success.!");
     } else {
-        alert("Tryagin Leter.!");
+        Swal.fire({
+            position: "center",
+            icon: "warning",
+            title: "Tryagin Leter.!",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 
 }
